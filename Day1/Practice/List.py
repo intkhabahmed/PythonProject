@@ -1,0 +1,11 @@
+myList = ["Apple", "orange"]
+print(myList)
+print("-------Append----------")
+myList.append("banana")
+print(myList)
+print("-------Extend----------")
+myList.extend(["papaya","Grapes"])
+print(myList)
+print("-------Pop----------")
+myList.pop(3)
+print(myList)
