@@ -1,0 +1,5 @@
+file = open("File1", "a+")
+file.write("\nHello this is appended at last of the file")
+file.seek(0)
+print file.read()
+file.close()
