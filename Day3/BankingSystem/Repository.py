@@ -1,4 +1,4 @@
-class Repositroy:
+class Repository:
 
     def __init__(self):
         self.__users = {}
@@ -14,11 +14,22 @@ class Repositroy:
     def addTransaction(self, transaction):
         self.__transactions.update({transaction.getTransactionId(): transaction})
 
-    def getAccounts(self):
-        return self.__accounts
+    def updateAccount(self, account):
+        self.__accounts[account.getAccountNumber()] = account
 
-    def getUsers(self):
-        return self.__users
+    def updateUser(self, user):
+        self.__users[user.getUserId()] =  user
 
-    def getTransactions(self):
-        return self.__transactions
+    def getAccount(self, accountNumber):
+        return self.__accounts[accountNumber]
+
+    def getUser(self, userId):
+        return self.__users[userId]
+
+    def getTransaction(self, acccountNumber):
+        transactions = []
+        for transaction in self.__transactions.values():
+            if transaction.getAccountNumber() == acccountNumber:
+                transactions.append(transaction)
+
+        return transactions

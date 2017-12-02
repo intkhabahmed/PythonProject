@@ -6,6 +6,7 @@ class Transaction:
         self.__transactionDescription = ""
         self.__transactionType = ""
         self.__transactionDate = ""
+        self.__accountNumber = ""
 
     def getTransactionId(self):
         return self.__transactionId
@@ -22,6 +23,9 @@ class Transaction:
     def getTransactionDate(self):
         return self.__transactionDate
 
+    def getAccountNumber(self):
+        return self.__accountNumber
+
     def setTransactionId(self, transactionId):
         self.__transactionId = transactionId
 
@@ -36,3 +40,6 @@ class Transaction:
 
     def setTransactionDate(self, transactionDate):
         self.__transactionDate = transactionDate
+
+    def setAccountNumber(self, accountNumber):
+        self.__accountNumber = accountNumber
