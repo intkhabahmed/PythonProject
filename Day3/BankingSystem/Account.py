@@ -5,6 +5,7 @@ class Account:
         self.__accountType = ""
         self.__accountBalance = ""
         self.__accountCreationDate = ""
+        self.__userName = ""
 
     def getAccountNumber(self):
         return self.__accountNumber
@@ -18,6 +19,9 @@ class Account:
     def getAccountCreationDate(self):
         return self.__accountCreationDate
 
+    def getUserName(self):
+        return self.__userName
+
     def setAccountNumber(self, accountNumber):
         self.__accountNumber = accountNumber
 
@@ -29,3 +33,6 @@ class Account:
 
     def setAccountCreationDate(self, accountCreationDate):
         self.__accountCreationDate = accountCreationDate
+
+    def setUserName(self, userName):
+        self.__userName = userName

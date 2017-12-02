@@ -9,7 +9,7 @@ class Repository:
         self.__accounts.update({account.getAccountNumber(): account})
 
     def addUser(self, user):
-        self.__users.update({user.getUserId(): user})
+        self.__users.update({user.getUserName(): user})
 
     def addTransaction(self, transaction):
         self.__transactions.update({transaction.getTransactionId(): transaction})
@@ -18,13 +18,13 @@ class Repository:
         self.__accounts[account.getAccountNumber()] = account
 
     def updateUser(self, user):
-        self.__users[user.getUserId()] =  user
+        self.__users[user.getUserName()] = user
 
     def getAccount(self, accountNumber):
         return self.__accounts[accountNumber]
 
-    def getUser(self, userId):
-        return self.__users[userId]
+    def getUser(self, userName):
+        return self.__users[userName]
 
     def getTransaction(self, acccountNumber):
         transactions = []

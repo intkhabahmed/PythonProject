@@ -1,13 +1,10 @@
 class User:
 
     def __init__(self):
-        self.__userId = ""
         self.__userName = ""
         self.__userEmail = ""
         self.__accountNumber = ""
 
-    def getUserId(self):
-        return self.__userId
 
     def getUserName(self):
         return self.__userName
@@ -17,9 +14,6 @@ class User:
 
     def getAccountNumber(self):
         return self.__accountNumber
-
-    def setUserId(self, userId):
-        self.__userId = userId
 
     def setUserName(self, userName):
         self.__userName = userName
