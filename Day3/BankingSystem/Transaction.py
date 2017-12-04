@@ -2,11 +2,11 @@ class Transaction:
 
     def __init__(self):
         self.__transactionId = ""
+        self.__transactionAmount = ""
         self.__transactionDescription = ""
         self.__transactionType = ""
-        self.__accountNumber = ""
-        self.__transactionAmount = ""
         self.__transactionDate = ""
+        self.__accountNumber = ""
 
     def getTransactionId(self):
         return self.__transactionId
@@ -43,3 +43,4 @@ class Transaction:
 
     def setTransactionDate(self, transactionDate):
         self.__transactionDate = transactionDate
+
