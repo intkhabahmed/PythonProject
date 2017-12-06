@@ -8,7 +8,6 @@ from datetime import *
 
 
 class Main:
-
     def __init__(self):
         self.__accountScheduler = AccountScheduler()
 
@@ -150,26 +149,27 @@ class Main:
                     print insufficientBalanceError
 
             elif choice == 5:
-            #     while True:
-            #         try:
-            #             accountNumber = input("Enter your account Number")
-            #             break
-            #         except SyntaxError:
-            #             print "Account Number can be numeric only"
-            #
-            #         try:
-            #             transactions = self.__accountScheduler.getTransactionHistory(accountNumber)
-            #             if transactions is None:
-            #                 print "You have not done any transactions yet"
-            #             else:
-            #                 print "TransactionId     Transaction Description     Transaction Type     Account Numeber     Amount\n"
-            #                 for transaction in transactions:
-            #                     print transaction.getTransactionId() + " " + transaction.getTransactionDescription() + " " + transaction.getTransactionType()
-            #                     +" " + transaction.getAccountNumber() + " " + transaction.getTransactionAmount() + "\n"
-            #         except AccountNumberNotFoundError, accountNumberNotFoundError:
-            #                 print accountNumberNotFoundError
-            #
-            # elif choice == 6:
+                while True:
+                    try:
+                        accountNumber = input("Enter your account Number")
+                        break
+                    except SyntaxError:
+                        print "Account Number can be numeric only"
+
+                try:
+                    transactions = self.__accountScheduler.getTransactionHistory(accountNumber)
+                    if transactions is None:
+                        print "You have not done any transactions yet"
+                    else:
+                        print "TransactionId     Transaction Description     Transaction Type     Account Numeber     Amount\n"
+                        for transaction in transactions:
+                            print str(transaction.getTransactionId()), str(
+                                transaction.getTransactionDescription()), str(transaction.getTransactionType()), str(
+                                transaction.getAccountNumber()), str(transaction.getTransactionAmount())
+                except AccountNumberNotFoundError, accountNumberNotFoundError:
+                    print accountNumberNotFoundError
+
+            elif choice == 6:
                 exit(0)
 
             else:

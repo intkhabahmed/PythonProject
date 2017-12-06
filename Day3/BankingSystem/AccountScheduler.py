@@ -34,7 +34,6 @@ class AccountScheduler:
                 transId = randint(1,100000)
                 continue
 
-        transaction.setTransactionId(transId)
         transaction.setAccountNumber(accountNumber)
         transaction.setTransactionAmount(amount)
         transaction.setTransactionDescription("Deposited Amount")
@@ -67,7 +66,6 @@ class AccountScheduler:
                 transId = randint(1,100000)
                 continue
 
-        transaction.setTransactionId(transId)
         transaction.setAccountNumber(accountNumber)
         transaction.setTransactionAmount(amount)
         transaction.setTransactionDescription("Amount Withdraw from account")
@@ -105,7 +103,6 @@ class AccountScheduler:
                 transId = randint(1,100000)
                 continue
 
-        transaction.setTransactionId(transId)
         transaction.setAccountNumber(senderAccountNumber)
         transaction.setTransactionAmount(amount)
         transaction.setTransactionDescription("Amount Transferred")
