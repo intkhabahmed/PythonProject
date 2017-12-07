@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django Forms Tutorial</title>
+</head>
+<body>
+<h2>Data inserted successfully!!</h2>
+<form method="POST" action="/getdata/">
+    <table>
+        <tr>
+            <td>Your Name</td>
+            <td><strong>{{ firstname }} {{lastname}}</strong></td>
+        </tr>
+        <tr>
+            <td>Your Qualification</td>
+            <td><strong>{{ qualification }}</strong></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
